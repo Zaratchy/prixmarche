@@ -47,11 +47,9 @@
     background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
     background-size: 100%;
   }
-  
   .showClose {
     background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
   }
-  
   .navbar {
     position: absolute;
     top: 0;
@@ -70,7 +68,6 @@
     margin-top: 10px;
   }
   .showNav {
-    
     transform: translateY(0);
   }
   .navbar ul {
@@ -91,6 +88,9 @@
     font-size: 1rem;
     line-height: 40px;
   }
+  .navbar ul li a:hover {
+    color: #e76f00;
+  }
 /*Section header*/
 .container {
   display: flex;
@@ -106,6 +106,31 @@
   margin-top:20px;
   margin-bottom: 20px;
 }
+/*Page categories*/
+.screen-left {
+  display: none;
+  background-color: #4b4b4b41;
+  margin: auto;
+  padding: 50px;
+}
+.screen-left a {
+  color: #000;
+  line-height: 30px;
+}
+.screen-left a:hover {
+  color: #e76f00;
+}
+.container-categories {
+  text-align: center;
+}
+.container-categories img {
+  width: 350px;
+}
+.container-categories img:hover {
+  border-radius: 10px;
+  border: 3px solid #e76f00;
+}
+
 /*Footer*/
 footer {
   background-color: #484343;
@@ -131,17 +156,40 @@ footer a:hover {
   width: 100%;
   margin: 0;
 }
+
 @media screen and (min-width: 768px){
+  /*home page*/
   .blocs {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .screen-left {
+    display: block;
+    width: 25%;
+    margin-top: 150px;
+    border-radius: 10px;
+  }
+  .container-categories {
+    width: 70%
+  }
+  .container-categories .bloc {
+    margin-left: 20px;
   }
   .blocs img {
     width: 90%;
   }
   .nav-mobile {
     display: none;
+  }
+  /*categories*/
+  .categories {
+    display: flex;
+    margin: 50px;
+  }
+  .container-categories img {
+    width: 200px;
+    height: 200px;
   }
   /*Menu pc*/
   .logo-search {
@@ -176,6 +224,10 @@ footer a:hover {
     padding-right: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+  .navbar-pc ul li a:hover {
+    color: #e76f00;
+    border: 1px solid#e76f00;;
   }
   .navbar-pc ul li a:hover {
     background-color: rgba(80, 78, 78, 0.575);
